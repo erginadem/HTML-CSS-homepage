@@ -1,0 +1,19 @@
+> Ekran görüntüsü paylaştığım sayfanın html ve css ile hazırlanması (3 madde)
+1- a. logo
+   b. Navbar menu
+   c. icon ve buton  şeklinde 3 bölümden oluşan header bölümünü yapmak
+2. Background image kullanarak bunu sayfanın tamamına yerleştirmek
+3. Sayfayı ortalayacak şekilde,
+a. Bir başlık
+b. kısa bir içerik
+c. 2 tane buton oluşturmak
+NOT: - Butonlara ve linklere hover özelliği eklemek.
+     - Responsive olarak yapma kısmı ilk etapta fazla olabilir. 
+     - O yüzden bu tercihe bağlı yetişme durumuna göre yapılabilir.
+     - buna ilişkin olarak bir yapılacaklar listesi hazırladım
+     - bu 3 maddeyi yaparak resimdeki görüntüye yakın bir sayfa hazırlamaya çalışalım
+     - Grup dersini salı ya da perşembe (practise olmadığı günler) birinde yapabiliriz. 
+     - Perşembe yapalım bence. 7 gün var herkesin üstünde rahatça uğraşacağı yeterli bir süre bence
+     - Erken biterse de buradan haberleşir takvimi değiştirebiliriz
+     - bitirince de üstünde tartışıp eksiklerimizi değerlendirebiliriz hep beraber
+     - herkese kolaylıklar iyi çalışmalar
