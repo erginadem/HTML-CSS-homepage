@@ -9,7 +9,7 @@
   --light: white;
   --dark: black;
   --color1: red;
-  --color2: greenyellow;
+  --color2: #2ed573;
 }
 
 body {
@@ -22,14 +22,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
-}
-
-.container span {
+.logo span {
   color: var(--light);
   font-size: 3rem;
 }
 
+/* ***Navbar*** */
 .nav-bar {
   display: flex;
   flex-wrap: wrap;
@@ -37,39 +35,35 @@ body {
   padding: 1rem 0;
 }
 
-.nav-bar .menu ul {
+/* ***Navbar menu*** */
+.menu ul {
 }
 
-.nav-bar .menu li {
+.menu li {
   display: inline-block;
 }
 
-.nav-bar .menu a {
+.menu a {
   text-decoration: none;
   color: var(--light);
   margin-right: 2rem;
+  transition: transform 0.2s;
 }
 
-.nav-bar .menu a:hover {
+.menu a:hover {
   color: var(--color1);
+  transform: scale(2);
 }
 
-.nav-bar .right-content {
+/* ***Navbar right-content*** */
+.right-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
 }
 
-.nav-bar .right-content i {
-  color: var(--light);
-}
-
-.nav-bar .right-content i:hover {
-  color: var(--color1);
-}
-
-.nav-bar .right-content .btn-reservation {
+.right-content .btn-reservation {
   padding: 0.5rem 2rem;
   border-radius: 20px;
   background-color: var(--color1);
@@ -78,8 +72,67 @@ body {
   transition: background-color 1s;
 }
 
-.nav-bar .right-content .btn-reservation:hover {
+.right-content .btn-reservation:hover {
   color: var(--color1);
   background-color: var(--light);
   box-shadow: 0 0 10px var(--color1);
+}
+
+.right-content i {
+  color: var(--light);
+}
+
+.right-content i:hover {
+  color: var(--color1);
+}
+
+/* ***Content*** */
+section.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  text-align: center;
+  color: var(--light);
+}
+
+.content .text1 {
+  color: var(--color2);
+}
+
+/* ***SECTION BUTTONS*** */
+section .buttons .btn2 {
+  border: 1px solid var(--light);
+  box-shadow: 0 0 10px var(--light);
+  border-radius: 15px;
+  padding: 0.7rem 3rem;
+  font-size: 12px;
+  background-color: transparent;
+  color: var(--light);
+  transition: transform 0.2s;
+}
+
+section .buttons .btn2:hover {
+  color: var(--light);
+  border: 1px solid var(--color2);
+  background-color: var(--color2);
+  transform: scale(1.1);
+}
+
+section .buttons .btn1 {
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--light);
+  padding: 0.7rem 3rem;
+  font-size: 12px;
+  background-color: var(--color2);
+  color: var(--light);
+  margin-right: 2rem;
+  transition: transform 0.2s;
+}
+
+section .buttons .btn1:hover {
+  border: 1px solid var(--light);
+  background-color: transparent;
+  color: var(--light);
+  transform: scale(1.1);
 }
