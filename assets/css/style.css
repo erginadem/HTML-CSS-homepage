@@ -9,7 +9,7 @@
   --light: white;
   --dark: black;
   --color1: red;
-  --color2: #2ed573;
+  --color2: #62871f;
 }
 
 body {
@@ -20,6 +20,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 50vh;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo span {
@@ -29,6 +38,7 @@ body {
 
 /* ***Navbar*** */
 .nav-bar {
+  /* border: 1px solid red; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -47,12 +57,10 @@ body {
   text-decoration: none;
   color: var(--light);
   margin-right: 2rem;
-  transition: transform 0.2s;
 }
 
 .menu a:hover {
   color: var(--color1);
-  transform: scale(2);
 }
 
 /* ***Navbar right-content*** */
@@ -80,6 +88,7 @@ body {
 
 .right-content i {
   color: var(--light);
+  margin-right: 1rem;
 }
 
 .right-content i:hover {
@@ -88,25 +97,50 @@ body {
 
 /* ***Content*** */
 section.content {
+  /* border: 1px solid aqua; */
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: space-between;
   text-align: center;
   color: var(--light);
+  padding: 0 10rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  section.content {
+    padding: 0 0;
+  }
 }
 
 .content .text1 {
   color: var(--color2);
+  font-size: 1.4rem;
+}
+
+.content .text2 h1 {
+  color: var(--light);
+  text-shadow: 0 0 10px var(--color1);
+  font-size: 4rem;
+}
+
+.content .text3 {
+  color: var(--light);
+  font-weight: 300;
 }
 
 /* ***SECTION BUTTONS*** */
+section .buttons {
+  margin-top: 3rem;
+}
+
 section .buttons .btn2 {
   border: 1px solid var(--light);
   box-shadow: 0 0 10px var(--light);
   border-radius: 15px;
   padding: 0.7rem 3rem;
-  font-size: 12px;
+  font-size: 1rem;
   background-color: transparent;
   color: var(--light);
   transition: transform 0.2s;
@@ -123,7 +157,7 @@ section .buttons .btn1 {
   border-radius: 15px;
   box-shadow: 0 0 10px var(--light);
   padding: 0.7rem 3rem;
-  font-size: 12px;
+  font-size: 1rem;
   background-color: var(--color2);
   color: var(--light);
   margin-right: 2rem;
