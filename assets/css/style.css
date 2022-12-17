@@ -1,30 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
   --light: white;
   --dark: black;
-  --color1: red;
-  --color2: #1dd1a1;
+  --color1: #fe113b;
+  --color2: #36cd8c;
 }
-
-body {
-  width: 100%;
-  height: 100%;
-  background-image: url("../img/bg-image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-}
-
 /* LAYER */
-.layer {
+.container .layer {
   background-color: black;
   opacity: 0.6;
   position: absolute;
@@ -32,16 +20,20 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* CONTAINER */
 .container {
-  /* border: 1px solid white; */
+  border: 3px solid red;
+  height: 100vh;
+  background-image: url("../img/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
-  height: 90vh;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .logo span {
@@ -56,6 +48,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 0;
+  z-index: 1;
 }
 
 /* NAVBAR MENU */
@@ -76,7 +69,7 @@ body {
 .menu a {
   text-decoration: none;
   color: var(--light);
-  margin-right: 2rem;
+  margin-right: 2.5rem;
   transition: all 0.5s;
   font-size: 1.2rem;
   font-weight: 100;
@@ -96,9 +89,9 @@ body {
 }
 
 .right-content .btn-reservation {
-  padding: 0.5rem 2rem;
+  padding: 1rem 3rem;
   margin-right: 1.1rem;
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: var(--color1);
   color: var(--light);
   border: 0px solid var(--color1);
@@ -158,8 +151,8 @@ section .buttons {
 
 section .buttons .btn2 {
   border: 1px solid var(--light);
-  border-radius: 15px;
-  padding: 0.7rem 3rem;
+  border-radius: 30px;
+  padding: 1rem 3.5rem;
   font-size: 1rem;
   background-color: transparent;
   color: var(--light);
@@ -167,15 +160,15 @@ section .buttons .btn2 {
 }
 
 section .buttons .btn2:hover {
+  border: none;
+  background-color: var(--color1);
   color: var(--light);
-  border: 1px solid var(--color2);
-  background-color: var(--color2);
   transform: scale(1.1);
 }
 
 section .buttons .btn1 {
-  border-radius: 15px;
-  padding: 0.7rem 3rem;
+  border-radius: 30px;
+  padding: 1rem 3.5rem;
   font-size: 1rem;
   background-color: var(--color2);
   color: var(--light);
@@ -184,8 +177,219 @@ section .buttons .btn1 {
 }
 
 section .buttons .btn1:hover {
-  border: 1px solid var(--light);
-  background-color: transparent;
+  border: none;
+  background-color: var(--color1);
   color: var(--light);
   transform: scale(1.1);
+}
+
+/* SECTION RECIPES */
+.recipes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7rem;
+  flex-wrap: wrap;
+  /* border: 1px solid blue; */
+  background-color: var(--light);
+  padding: 5rem;
+}
+
+.recipes-container .btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.recipes-container .btn-group .btn-way {
+  padding: 1rem 1.5rem;
+  font-weight: bolder;
+  background-color: #e5e5e5;
+  border: none;
+  box-shadow: 0 0 2px black;
+}
+
+.recipes-container .btn-group .btn-num,
+.btn-way {
+  font-weight: bolder;
+  padding: 1rem 1.5rem;
+  background-color: #e5e5e5;
+  border: none;
+  box-shadow: 0 0 2px black;
+}
+
+.recipes-container .btn-group .btn-way:hover {
+  background-color: var(--color1);
+  color: var(--light);
+}
+
+.recipes-container .btn-group .btn-num:hover {
+  background-color: var(--color1);
+  color: var(--light);
+}
+
+.recipe-box {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+.recipe-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* border: 3px solid black; */
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  /* border: 3px solid green; */
+  padding: 3rem;
+}
+
+.recipe-info .btn1 {
+  border-radius: 30px;
+  padding: 1rem 3.5rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: var(--color2);
+  color: var(--light);
+  margin-right: 2rem;
+  transition: transform 0.2s;
+}
+
+.recipe-info .btn1:hover {
+  border: none;
+  background-color: var(--color1);
+  color: var(--light);
+  transform: scale(1.1);
+}
+
+.recipe-info span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color2);
+}
+
+.recipe-info p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.recipe-info h2 {
+  letter-spacing: 1px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #282528;
+}
+
+.contact-section .contact-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 5rem 5rem;
+  color: var(--light);
+}
+
+.contact-section .contact-box input {
+  display: block;
+  padding: 2rem 0;
+  border: 0;
+  border-bottom: 1px solid #7f8c8d;
+  outline: 0;
+  background-color: #282528;
+  color: var(--light);
+  font-size: 1.5rem;
+}
+
+.contact-section .contact-box input::placeholder {
+  color: var(--light);
+}
+
+.contact-section .contact-image {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-section .contact-box h3 {
+  display: flex;
+  font-size: 4.5rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.contact-section .contact-box .btn-submit {
+  border-radius: 40px;
+  padding: 1.3rem 4.2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background-color: var(--color2);
+  color: var(--light);
+  margin-right: 2rem;
+  transition: transform 0.2s;
+}
+
+.contact-section .contact-box button:hover {
+  border: none;
+  background-color: var(--color1);
+  color: var(--light);
+  transform: scale(1.1);
+}
+
+/* SECTION WORK-HOURS */
+.work-time {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5rem 0;
+  text-align: center;
+  background-color: #fff5ec;
+}
+
+.work-time .info h3 {
+  color: var(--color1);
+  font-weight: bolder;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.work-time .info p {
+  font-size: 1.3rem;
+  margin-bottom: -4px;
+}
+
+/* FOOTER */
+footer {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: var(--color1);
+  color: var(--light);
+}
+
+footer h5 {
+  margin-bottom: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--light);
+  margin-right: 2rem;
+  font-size: 1.6rem;
+}
+
+footer a:hover {
+  color: var(--color2);
 }
