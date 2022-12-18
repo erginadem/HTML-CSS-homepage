@@ -19,19 +19,26 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 0;
+}
+
+body {
+  width: 100%;
 }
 
 /* CONTAINER */
 .container {
   border: 3px solid red;
+  max-width: 100%;
   height: 100vh;
   background-image: url("../img/bg-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   position: relative;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   z-index: 1;
 }
